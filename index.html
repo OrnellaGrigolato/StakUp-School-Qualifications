@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack Up School Qualifications</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" defer></script>
+  </head>
+
+  <body>
+    <div id="inner-container">
+      <header>
+        <h1>Stack Up School Qualifications</h1>
+        <p class="page-description">
+          Welcome to Stack Up's school site, here you will find the
+          qualifications of all students, you will be able to calculate
+          averages, add students and their qualifications, among other things.
+        </p>
+      </header>
+      <div class="container">
+          <section>
+            <div style="display: flex;">
+                <h2>All Students</h2> 
+            </div>
+            <ul id="studentsList">
+            </ul>
+          </section>
+          <br>
+          <section>
+          <h2>Actions</h2>
+            <form id="addGradeForm">
+                <label for="studentSelect">Select a student:</label>
+                <select id="studentSelect">
+                    <option value="Olivia Brown">Olivia Brown</option>
+                    <option value="William Wilson">William Wilson</option>
+                    <option value="Mia Jackson">Mia Jackson</option>
+                    <option value="Harry Jones">Harry Jones</option>
+                    <option value="Ava Taylor">Ava Taylor</option>
+                </select>
+                <br>
+                <h3>Add New Qualification</h3>
+                <input class="input" type="number" id="gradeValue" step="0.01" placeholder="Enter the new qualification" required>
+                
+                <br>
+                <button type="button" class="button">Add Qualification</button>
+                <p id="qualificationError"></p>
+            </form>
+  
+            <div class="flex">
+                <h3>Calculate Average</h3>
+                <button id="calculateAverageBtn" class="button">Calculate Average</button>
+            </div>
+            <p>The selected student's average is:<span id="averageResult"></span></p>
+            <div class="flex">
+              <h3>Approval/Reproval Status</h3>
+              <button id="calculateStatusBtn" class="button">Check State</button>
+            </div>
+            <p>State: <span id="statusResult"></span></p>
+          
+          
+          <section>
+            <h3>Add student</h3>
+            <input class="input" type="text" id="addStudentForm" placeholder="Enter the student's full name" /><button class="button">
+              Add student
+            </button>
+            <p id="addStudentError"></p>
+          </section>
+      </div>
+    </div>
+  </body>
+</html>
